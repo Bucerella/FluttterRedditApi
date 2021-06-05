@@ -65,8 +65,7 @@ class _HomeScreenState extends State<HomeScreen>
                   drawerItem(
                       icon: Icons.payments_outlined,
                       text: 'Reddit Coins'),
-                  drawerItem(
-                      icon: Icons.save, text: 'Saved'),
+                  drawerItem(icon: Icons.save, text: 'Saved'),
                   Divider(),
                   drawerItem(
                     icon: Icons.notifications_active,
@@ -91,23 +90,24 @@ class _HomeScreenState extends State<HomeScreen>
 
 Widget drawerHeader() {
   return DrawerHeader(
-      margin: EdgeInsets.zero,
-      padding: EdgeInsets.zero,
-      child: Image.network(
-        'https://i.redd.it/2qy7unjo2j331.png',
-        errorBuilder: (
-          BuildContext context,
-          Object exception,
-          StackTrace stackTrace,
-        ) {
-          return Container(
-            child: Image.network(
-              'https://i4.hurimg.com/i/hurriyet/75/750x422/6014124cc9de3d5810819f47.png',
-              fit: BoxFit.contain,
-            ),
-          );
-        },
-      ));
+    margin: EdgeInsets.zero,
+    padding: EdgeInsets.zero,
+    child: Image.network(
+      'https://i.redd.it/2qy7unjo2j331.png',
+      errorBuilder: (
+        BuildContext context,
+        Object exception,
+        StackTrace stackTrace,
+      ) {
+        return Container(
+          child: Image.network(
+            'https://i4.hurimg.com/i/hurriyet/75/750x422/6014124cc9de3d5810819f47.png',
+            fit: BoxFit.contain,
+          ),
+        );
+      },
+    ),
+  );
 }
 
 Widget drawerItem({

@@ -6,8 +6,8 @@ class SpecialListTile extends StatelessWidget {
   String img;
   int comments;
 
-  SpecialListTile( this.title, this.description,
-      this.comments, this.img);
+  SpecialListTile(
+      this.title, this.description, this.comments, this.img);
 
   @override
   Widget build(BuildContext context) {
@@ -31,9 +31,7 @@ class SpecialListTile extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
+                  SizedBox(height: 10),
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Container(
@@ -45,18 +43,18 @@ class SpecialListTile extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
+                  SizedBox(height: 10),
                   Align(
-                      alignment: Alignment.centerLeft,
-                      child: Container(
-                          child: Text(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      child: Text(
                         this.comments.toString() + "  Comments",
                         style: TextStyle(
                             fontStyle: FontStyle.italic,
                             color: Colors.grey),
-                      )))
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
